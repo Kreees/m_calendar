@@ -1,9 +1,9 @@
 muon.AddNoteModelView = muon.ModelView.extend {
   events: {
-    "vmousedown #save": "save"
-    "vmousedown .instrs > div": "instr"
-    "vmousedown .colors > div": "color"
-    "vmousedown .brush": "brush"
+    "click #save": "save"
+    "click .instrs > div": "instr"
+    "click .colors > div": "color"
+    "click .brush": "brush"
   }
   rendered: ->
     @$("input,textarea").one("change",=>
@@ -121,6 +121,7 @@ muon.AddNoteModelView = muon.ModelView.extend {
     return d.getDate()+"."+ (d.getMonth()+1)+"."+ (d.getFullYear()-2000)
   save: (e)->
     return if $(e.currentTarget).hasClass "disabled"
+    @model.set("image",@canvas.toDataURL())
     @model.save().then ->
       m.router.back()
 }

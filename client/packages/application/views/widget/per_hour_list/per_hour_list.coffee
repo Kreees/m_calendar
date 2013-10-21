@@ -15,7 +15,8 @@ muon.WidgetView.extend {
     m.router.navigate("/add_note")
   rendered: ->
     @$(".per_hour").append("<hr/>")
-    @context.collection.fetch().then(@render_items.bind(this)) if @context.collection?
+    @context.collection.fetch().then(@render_items.bind(this))
+    @listenTo(@context.collection,"sync",@render_items.bind(this))
   render_items: ->
     col = @context.collection
     if !col?
@@ -56,7 +57,5 @@ muon.WidgetView.extend {
     @$(".selected").not(ev.currentTarget).removeClass("selected");
     $(ev.currentTarget).toggleClass("selected");
   remove: ->
-    if this.context.collection
-      this.context.collection.remove()
     m.WidgetView.prototype.remove.call(this)
 }

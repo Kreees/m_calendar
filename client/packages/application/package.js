@@ -58,7 +58,9 @@ module.exports = {
             page: "note_view",
             callback: function(id){
                 this.back_str = "Note";
-                m.set_projection("note_full_view",new m.models.note(id))
+                var model = new m.models.note(id);
+                model.fetch();
+                m.set_projection("note_full_view",model);
             }
         },
         {
