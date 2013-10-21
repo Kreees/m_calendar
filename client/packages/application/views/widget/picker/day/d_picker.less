@@ -1,0 +1,39 @@
+.days {
+  width: 380px;
+//  background-color: #eee;
+  padding: 0;
+  margin: 0;
+  .day {
+    float: left;
+    padding: 0;
+    margin: 0;
+//    background-color: #ddd;
+    text-align: right;
+    font-size: 35px;
+    height: 30px;
+    width: 50px;
+    padding-bottom: -10px;
+    padding-top: 30px;
+    font-weight: lighter;
+    border: 2px solid transparent;
+    transition: border 300ms, background 300ms;
+    color: white;
+    &:hover {
+      color: #333;
+      border: 2px solid #eee;
+      background-color: #fafafa;
+      cursor: pointer;
+    }
+    &.weekend {
+      color: red
+    }
+    &.offset1 {margin-left:54px;}
+    &.offset2 {margin-left:108px;}
+    &.offset3 {margin-left:162px;}
+    &.offset4 {margin-left:216px;}
+    &.offset5 {margin-left:270px;}
+    &.offset6 {margin-left:324px;}
+  }
+}
+
+

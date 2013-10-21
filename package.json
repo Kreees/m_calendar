@@ -1,0 +1,15 @@
+{
+    "name": "mobileapp",
+    "version": "0.0.1",
+    "author":"sukharev",
+    "scripts": {
+        "start": "node app.js 1>access.log 2>error.log &",
+        "stop": "kill -9 `cat .muon`",
+        "reload": "npm stop && npm start"
+    },
+    "dependencies": {
+        "muon": "*",
+        "q": "*",
+        "underscore": "*"
+    }
+}

@@ -1,0 +1,9 @@
+div.per_hour
+    - for(var i = 23; i >= 0; i--)
+        - var text = i.toString();
+        - text = ((text.length == 1)?"0"+text:text) + ":00";
+        hr
+        div(class='hour empty hour_#{i}')
+            div #{text}
+            div.title(id="#{i}") Swipe right to add new note
+            div.full_list

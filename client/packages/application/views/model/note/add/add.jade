@@ -1,0 +1,44 @@
+div.model
+    div#save.disabled
+        div.box
+        img(data-src='check.png')
+    div.header
+        span.gratis Note: &nbsp;
+        span.date(data-model-get='str_date')
+    div.instrs
+        div#text.selected
+            img(data-src='text.png')
+        div#draw
+            img(data-src='draw.png')
+        div#attach
+            img(data-src='attach.png')
+    div.body
+        div.wrapper
+            input.input.title(data-model-set='title',placeholder='Title...')
+        div.wrapper#body
+            textarea(data-model-set='body',placeholder='Text...')
+        div.wrapper#canvas
+            div.panel
+                div.colors
+                    div.selected(data-color='rgba(0,0,0,1)')
+                    div(data-color='rgba(64,64,64,1)')
+                    div(data-color='rgba(128,128,128,1)')
+                    div(data-color='rgba(192,192,192,1)')
+                    div(data-color='rgba(255,255,255,1)')
+                    div(data-color='rgba(255,0,0,1)')
+                    div(data-color='rgba(0,255,0,1)')
+                    div(data-color='rgba(0,0,255,1)')
+                    div(data-color='rgba(255,255,0,1)')
+                    div(data-color='rgba(255,0,255,1)')
+                div.brush.small.selected
+                    img(data-src='brush.small.png')
+                div.brush.medium
+                    img(data-src='brush.mid.png')
+                div.brush.large
+                    img(data-src='brush.large.png')
+                div.brush.eraser
+                    img(data-src='eraser.png')
+            canvas(width='420',height='480')
+
+
+

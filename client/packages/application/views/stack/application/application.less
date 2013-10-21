@@ -1,0 +1,43 @@
+& {
+  position: fixed;
+  position: absolute;
+  top: 30px; bottom: 0;
+  left: 50%; right: 0;
+  margin-left: -240px;
+  height: 800px; width: 480px;
+  overflow-y: auto;
+  background-color: #333;
+  box-shadow: black 0 0 15px;
+  & > .header {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 40px;
+    background-color: black;
+    * {
+      color: white !important;
+    }
+    & > div {
+      position: absolute;
+      top: 0; height: 100%;
+
+    }
+    #back {
+      left: 0; width: 100px;
+    }
+
+    #title {
+      left: 100px; right: 100px;
+    }
+    #opts {
+      width: 40px; right: 0;
+    }
+  }
+  div#target {
+    position: absolute;
+    overflow: hidden;
+    width: 100%; top: 40px; bottom: 0;
+    & > div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
