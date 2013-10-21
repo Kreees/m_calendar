@@ -1,1 +1,1 @@
-# Muon.js example project for mobile platform
+# Muon.js example mobile project
