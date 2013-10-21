@@ -41,16 +41,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="add.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/packages/application/views/model/note/add/add.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="21" selection-start="3860" selection-end="3860" vertical-scroll-proportion="0.49367088" vertical-offset="438" max-vertical-offset="675">
+            <state line="124" column="21" selection-start="3860" selection-end="3860" vertical-scroll-proportion="-4.68" vertical-offset="438" max-vertical-offset="675">
               <folding>
                 <element signature="e#227#2375#0" expanded="false" />
                 <element signature="e#1201#2206#0" expanded="false" />
                 <element signature="e#2395#2650#0" expanded="false" />
                 <element signature="e#2670#3064#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="5" selection-start="28" selection-end="28" vertical-scroll-proportion="0.114503816" vertical-offset="0" max-vertical-offset="262">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,7 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/server/app/models/note.js" />
         <option value="$PROJECT_DIR$/client/packages/application/views/layout/page/add_note/add_note.jade" />
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/client/assets/css/application.css" />
@@ -135,6 +143,7 @@
         <option value="$PROJECT_DIR$/server/app/controllers/note.js" />
         <option value="$PROJECT_DIR$/node_modules/muon/server/lib/controllers/rest.js" />
         <option value="$PROJECT_DIR$/client/packages/application/views/model/note/add/add.coffee" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -579,11 +588,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="45" selection-start="468" selection-end="468" vertical-scroll-proportion="0.2112676" vertical-offset="0" max-vertical-offset="568" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/packages/application/views/stack/application/application.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="1" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
@@ -684,13 +688,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/packages/application/views/model/note/add/add.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="21" selection-start="3860" selection-end="3860" vertical-scroll-proportion="0.49367088" vertical-offset="438" max-vertical-offset="675">
+        <state line="124" column="21" selection-start="3860" selection-end="3860" vertical-scroll-proportion="-4.68" vertical-offset="438" max-vertical-offset="675">
           <folding>
             <element signature="e#227#2375#0" expanded="false" />
             <element signature="e#1201#2206#0" expanded="false" />
             <element signature="e#2395#2650#0" expanded="false" />
             <element signature="e#2670#3064#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="5" selection-start="28" selection-end="28" vertical-scroll-proportion="0.114503816" vertical-offset="0" max-vertical-offset="262">
+          <folding />
         </state>
       </provider>
     </entry>
