@@ -1,9 +1,9 @@
 muon.AddNoteModelView = muon.ModelView.extend {
   events: {
-    "click #save": "save"
-    "click .instrs > div": "instr"
-    "click .colors > div": "color"
-    "click .brush": "brush"
+    "vclick #save": "save"
+    "vclick .instrs > div": "instr"
+    "vclick .colors > div": "color"
+    "vclick .brush": "brush"
   }
   rendered: ->
     @$("input,textarea").one("change",=>
@@ -108,12 +108,14 @@ muon.AddNoteModelView = muon.ModelView.extend {
         "z-index":0
       })
       @$("#canvas .panel").hide()
+      @canvas_enabled = false
     if el.id == "draw"
       @$("#canvas").css({
         "z-index":1
       })
       @$("#canvas .panel").show()
       setTimeout =>
+        @canvas_enabled = true
         @ctx.drawImage(@img,0,0,@canvas.width,@canvas.height,0,0,@canvas.width,@canvas.height)
       ,1
   get_str_date: ->
@@ -121,7 +123,10 @@ muon.AddNoteModelView = muon.ModelView.extend {
     return d.getDate()+"."+ (d.getMonth()+1)+"."+ (d.getFullYear()-2000)
   save: (e)->
     return if $(e.currentTarget).hasClass "disabled"
-    @model.set("image",@canvas.toDataURL())
+    if @canvas_enabled
+      @model.set("image",@canvas.toDataURL())
+    else
+      @model.set("image",@img.src)
     @model.save().then ->
       m.router.back()
 }

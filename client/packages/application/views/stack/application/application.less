@@ -1,6 +1,11 @@
 & {
   position: fixed;
   position: absolute;
+  opacity: 0;
+  transition: opacity 500ms;
+  &.visible {
+    opacity: 1;
+  }
   top: 30px; bottom: 0;
   left: 50%; right: 0;
   margin-left: -240px;

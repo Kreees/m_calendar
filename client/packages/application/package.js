@@ -11,13 +11,7 @@ module.exports = {
     routes: [
         {
             route: "",
-            redirect: "/login"
-        },
-        {
-            route: "login",
-            callback: function(){
-                if (m.user_logined) _.defer(m.router.navigate,"/calendar");
-            }
+            redirect: "/calendar"
         },
         {
             route: "logout",
@@ -63,9 +57,8 @@ module.exports = {
                 m.set_projection("note_full_view",model);
             }
         },
-        {
-            route: "add_note"
-        }
+        {route: "options"},
+        {route: "add_note"}
     ],
     surrogate: {},
     ready: function(cb){
@@ -73,6 +66,13 @@ module.exports = {
         this.back_str = [];
         m.monthes = ["January","February","March","April","May","June","Jule","August","September","October","November","December"]
         m.days_of_week = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-        if (localStorage["user"] && localStorage["password"]) m.user_logined = true;
+
+        if (localStorage["login"] && localStorage["password"]){
+            m.user_logined = true;
+            m.set_profile("logined");
+        }
+        else {
+            m.router.navigate("/",{skipHistory: true,trigger:false});
+        }
     }
 }

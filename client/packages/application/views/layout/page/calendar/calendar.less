@@ -1,26 +1,9 @@
 & > div.header {
   position: absolute;
-  top: 0; left: 0; right: 0; height: 50px;
+  top: 0; left: 0; right: 0; height: 80px;
+  padding-top: 5px;
   width: 100% ;
   background-color: rgba(0,0,0,.5);
-  & > div {
-    margin-left: 50%;
-    height: 25px;
-    & > div {
-      width: 480px;
-      height: 100%;
-      position: relative;
-      margin-left: -240px;
-      * {
-        color: white;
-      }
-      button {
-        width: 30px;
-        border: none;
-        background: transparent;
-      }
-    }
-  }
   z-index: 100;
 }
 
@@ -45,6 +28,7 @@
       }
       &:nth-child(2) {
         top: -160px;
+        z-index: 2;
       }
       &:nth-child(3) {
         opacity: 0.5;

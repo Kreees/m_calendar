@@ -6,9 +6,16 @@ m.WidgetView.extend {
     @context.str = back_list.pop() || "" if flag
     flag = false
   events: {
-    "click": "back"
+    "vmousedown": "back"
   }
-  back: ->
+  rendered: ->
+    if m.router.history().length < 1
+      @$el.addClass("no-history")
+    else
+      @$el.removeClass("no-history")
+  back: (ev)->
+    ev.preventDefault()
+    ev.stopPropagation()
     if m.router.history().length < 1
       return
     flag = true

@@ -1,3 +1,15 @@
 h1(data-model-attr='title')
-p(data-model-attr='body')
-img(data-model-attr='image',data-attr-type='src')
+h5
+    span Target time&nbsp;:&nbsp;
+    span(data-model-get='date')
+    span(data-model-get='date_dif')
+h5
+    span Published&nbsp;:&nbsp;
+    span(data-model-get='pub_date')
+    span(data-model-get='pub_date_dif')
+div
+    p(data-model-attr='body')
+    img(data-model-attr='image',data-attr-type='src')
+div.next_prev
+    div Prev
+    div Next

@@ -3,9 +3,10 @@ muon.WidgetView.extend {
     if !context.date
       context.date = new Date()
   events: {
-    "click .add": "add_note"
-    "click .hour": "toggle_hour_list"
-    "click .empty .title": "add_note"
+    "vclick .add": "add_note"
+    "vclick .hour": "toggle_hour_list"
+    "vclick .empty .title": "add_note"
+    "vclick .add": "add_note"
   },
   add_note: (ev)->
     d = @context.date
@@ -41,10 +42,10 @@ muon.WidgetView.extend {
         ((model)=>
           return if not model?
           return if el[0].querySelectorAll("a[data-route='/note/"+model.id+"']").length > 0
-          el.find(".full_list").append($("<div />").html(
+          $("<div />").html(
             "<span class='then'>then&nbsp;&nbsp;&nbsp;</span>"+"<a data-route='/note/"+model.id+"'>"+
             model.get("title")+"</a>"
-          ))
+          ).insertBefore(el.find(".full_list .add"))
         )(h_models.models[i]) for i in [1..h_models.length]
         el.removeClass("empty").addClass("not_empty")
       else

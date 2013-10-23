@@ -9,7 +9,7 @@ muon.WidgetView.extend {
     $(m).bind("projection_updated."+@context.val,@render_value.bind(this))
     m.set_projection(this.context.val,@value);
   events: {
-    "click button": "change_value"
+    "vclick button": "change_value"
   }
   render_value: ->
     @value = m.get_projection(@context.val)

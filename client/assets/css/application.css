@@ -8,10 +8,16 @@
  *
  */
 
+@font-face {
+    font-family: HelveticaThin;
+    src: local('HelveticaThin'), url(./HelveticaNeueCyr-Thin.otf);
+}
+
 * {
     padding: 0; margin: 0;
     color: white;
-    font-weight: lighter !important;
+    font-family: "HelveticaThin","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+    font-weight: 100 !important;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;

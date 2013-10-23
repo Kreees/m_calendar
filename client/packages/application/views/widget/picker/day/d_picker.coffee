@@ -9,9 +9,10 @@ muon.WidgetView.extend {
       .bind("projection_updated.month_picker_val",@period_changed.bind(this))
     _.defer(@period_changed.bind(this))
   events: {
-    "click .day": "day_selected"
+    "vclick .day": "day_selected"
   },
   period_changed: ->
+    today = new Date()
     month = m.get_projection("month_picker_val")
     year = m.get_projection("year_picker_val")
     offset = "0px"
@@ -41,9 +42,12 @@ muon.WidgetView.extend {
       if [6,0].indexOf(new Date(year,month,i).getDay()) != -1
         el.addClass("weekend")
       el[0].dataset.day = i;
+      if (today.getMonth() == month) and (today.getFullYear() == year) and (today.getDate() == i)
+        el.addClass("today")
       el.appendTo(@$(".days"));
     )(i) for i in [1..daysInMonth(year,month)];
   day_selected: (ev)->
+    return if !@$el.hasClass("current")
     year = m.get_projection("year_picker_val")
     month = m.get_projection("month_picker_val")
     day = ev.currentTarget.dataset.day
