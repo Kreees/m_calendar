@@ -5,7 +5,7 @@
     "port": "8000",
     "db_host": "127.0.0.1",
     "lang": "ru",
-    "server_mode": "development",
+    "server_mode": "production",
     "plugins": {
         "muon": {}
     }

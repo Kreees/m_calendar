@@ -67,9 +67,13 @@ module.exports = {
         m.monthes = ["January","February","March","April","May","June","Jule","August","September","October","November","December"]
         m.days_of_week = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
+
         if (localStorage["login"] && localStorage["password"]){
             m.user_logined = true;
             m.set_profile("logined");
+            (new m.models["MUON:user.user"]("me")).fetch().fail(function(){
+                m.remove_profile("logined");
+            });
         }
         else {
             m.router.navigate("/",{skipHistory: true,trigger:false});

@@ -3,6 +3,10 @@ var _ = require('underscore');
 
 module.exports = m.rest.extend({
     dependencies: ["MUON:user.user"],
+    permissions: function(){
+        if (this.user) return ["all"];
+        else return []
+    },
     where: function(){
         return {user:this.user.id};
     },
