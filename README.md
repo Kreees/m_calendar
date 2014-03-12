@@ -8,6 +8,6 @@ npm install -g muon
 ~~~
 Use render-client to generate client static files to push as WebView mobile files:
 ~~~
-render-client -d <domain_name>
+m-pack-client -d <domain_name>
 ~~~
 
